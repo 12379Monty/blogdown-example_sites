@@ -1,0 +1,54 @@
+
+
+processing file: _example_sites.Rmd
+1/29                      
+2/29 [sidenote]           
+3/29                      
+4/29 [setup]              
+5/29                      
+6/29 [infex-GlobalOptions]
+7/29                      
+8/29 [index-Prelims]      
+9/29                      
+10/29 [initiate-site]      
+11/29                      
+12/29 [config-yaml]        
+13/29                      
+14/29 [netlify-toml]       
+15/29                      
+16/29 [index-rmd]          
+17/29                      
+18/29 [r-build-r]          
+19/29                      
+20/29 [r-build2-r]         
+21/29                      
+22/29 [content]            
+23/29                      
+24/29 [build]              
+Start building sites … 
+hugo v0.148.2-40c3d8233d4b123eff74725e5766fc6272f0a84d+extended darwin/amd64 BuildDate=2025-07-27T12:43:24Z VendorInfo=gohugoio
+
+
+                  │ EN 
+──────────────────┼────
+ Pages            │ 21 
+ Paginator pages  │  0 
+ Non-page files   │  1 
+ Static files     │ 13 
+ Processed images │  0 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 26 ms
+25/29                      
+26/29 [serve-site]         
+27/29                      
+28/29 [unnamed-chunk-1]    
+output file: _example_sites.knit.md
+
+/usr/local/bin/pandoc +RTS -K512m -RTS _example_sites.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output _example_sites.html --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/table-classes.lua --embed-resources --standalone --wrap preserve --variable bs3=TRUE --section-divs --template /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --number-sections --variable theme=bootstrap --mathjax --variable 'mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /var/folders/sd/l5v8_p393yn5fhchqdjypvfw0000gn/T//RtmpFhlVRm/rmarkdown-str126683bab9268.html --variable code_folding=hide --variable code_menu=1 
+
+Output created: _example_sites.html
+Warning message:
+In in_dir(input_dir(), expr) :
+  You changed the working directory to /Users/fcollin/Documents/Projects/Rstuff/blogdown/yihui_hugo-lithium (probably via setwd()). It will be restored to /Users/fcollin/Documents/Projects/Rstuff/blogdown/example_sites. See the Note section in ?knitr::knit
