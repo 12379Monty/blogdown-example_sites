@@ -1,30 +1,32 @@
 
 
 processing file: _example_sites.Rmd
-1/29                      
-2/29 [sidenote]           
-3/29                      
-4/29 [setup]              
-5/29                      
-6/29 [infex-GlobalOptions]
-7/29                      
-8/29 [index-Prelims]      
-9/29                      
-10/29 [initiate-site]      
-11/29                      
-12/29 [config-yaml]        
-13/29                      
-14/29 [netlify-toml]       
-15/29                      
-16/29 [index-rmd]          
-17/29                      
-18/29 [r-build-r]          
-19/29                      
-20/29 [r-build2-r]         
-21/29                      
-22/29 [content]            
-23/29                      
-24/29 [build]              
+1/53                      
+2/53 [sidenote]           
+3/53                      
+4/53 [setup]              
+5/53                      
+6/53 [infex-GlobalOptions]
+7/53                      
+8/53 [index-Prelims]      
+9/53                      
+10/53 [1-initiate-site]    
+11/53                      
+12/53 [1-det-struc]        
+13/53                      
+14/53 [1-config-yaml]      
+15/53                      
+16/53 [1-netlify-toml]     
+17/53                      
+18/53 [1-index-rmd]        
+19/53                      
+20/53 [1-r-build-r]        
+21/53                      
+22/53 [1-r-build2-r]       
+23/53                      
+24/53 [1-content]          
+25/53                      
+26/53 [1-build]            
 Start building sites … 
 hugo v0.148.2-40c3d8233d4b123eff74725e5766fc6272f0a84d+extended darwin/amd64 BuildDate=2025-07-27T12:43:24Z VendorInfo=gohugoio
 
@@ -39,14 +41,48 @@ hugo v0.148.2-40c3d8233d4b123eff74725e5766fc6272f0a84d+extended darwin/amd64 Bui
  Aliases          │  0 
  Cleaned          │  0 
 
-Total in 26 ms
-25/29                      
-26/29 [serve-site]         
-27/29                      
-28/29 [unnamed-chunk-1]    
+Total in 23 ms
+27/53                      
+28/53 [1-serve-site]       
+29/53                      
+30/53 [2-initiate-site]    
+31/53                      
+32/53 [2-det-struc]        
+33/53                      
+34/53 [2-hugo-yaml]        
+35/53                      
+36/53 [2-netlify-toml]     
+37/53                      
+38/53 [2-content]          
+39/53                      
+40/53 [3-initiate-site]    
+trying URL 'https://github.com/xianmin/hugo-theme-jane/archive/HEAD.tar.gz'
+downloaded 3.2 MB
+
+trying URL 'https://github.com/hugomods/icons/archive/HEAD.tar.gz'
+downloaded 18 KB
+
+trying URL 'https://github.com/hugomods/lucide-icons/archive/HEAD.tar.gz'
+downloaded 2.2 MB
+
+trying URL 'https://github.com/Templarian/MaterialDesign-SVG/archive/HEAD.tar.gz'
+downloaded 1.3 MB
+
+41/53                      
+42/53 [3-det-struc]        
+43/53                      
+44/53 [3-hugo-yaml]        
+45/53                      
+46/53 [3-netlify-toml]     
+47/53                      
+48/53 [3-full-config-toml] 
+49/53                      
+50/53 [3-content]          
+51/53                      
+52/53 [unnamed-chunk-1]    
 output file: _example_sites.knit.md
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _example_sites.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output _example_sites.html --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/table-classes.lua --embed-resources --standalone --wrap preserve --variable bs3=TRUE --section-divs --template /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --number-sections --variable theme=bootstrap --mathjax --variable 'mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /var/folders/sd/l5v8_p393yn5fhchqdjypvfw0000gn/T//RtmpFhlVRm/rmarkdown-str126683bab9268.html --variable code_folding=hide --variable code_menu=1 
+/usr/local/bin/pandoc +RTS -K512m -RTS _example_sites.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output _example_sites.html --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmarkdown/lua/table-classes.lua --embed-resources --standalone --wrap preserve --variable bs3=TRUE --section-divs --template /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --number-sections --variable theme=bootstrap --mathjax --variable 'mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /var/folders/sd/l5v8_p393yn5fhchqdjypvfw0000gn/T//Rtmp6n3gQy/rmarkdown-str2d3840a44884.html --variable code_folding=hide --variable code_menu=1 
 
 Output created: _example_sites.html
 Warning message:

@@ -75,7 +75,11 @@ g-table-intro h4 {
 }
 </style>
 
+
 ```{r setup, include = FALSE}
+
+#options(knitr.duplicate.label = "allow")
+
 knitr::opts_chunk$set(echo = TRUE,
                       comment = NA,
                       warning = FALSE,
@@ -97,7 +101,6 @@ options(stringsAsFactors=F)
 
 ```
 <!-- ######################################################################## -->
-
 
 ```{r index-Prelims,  include=FALSE, echo=FALSE, results='hide', message=FALSE} 
 
@@ -133,10 +136,17 @@ PREFIX <- "example_sites"
 
 <br/>
 
-# Theme = `r h_theme  = "yihui/hugo-lithium"; h_theme`
+# Theme = `r h_theme  = "yihui/hugo-lithium"; h_theme` {.tabset}
 
-Initiate site. 
-```{r initiate-site, echo=T, cache=T, cache.vars='h_theme_dir'}
+URL: https://yihui-hugo-lithium.netlify.app/
+
+## Home {-}
+
+<br/>
+
+## Structure {-}
+
+```{r 1-initiate-site, echo=T, cache=T, cache.vars='h_theme_dir'}
 
 h_theme_dir <- paste0("../", sub("/", '_', h_theme))
 
@@ -171,16 +181,19 @@ fs::dir_tree(file.path(h_theme_dir), recurse=F)
 
 ```
 
-## `r h_theme` Site Structure {.tabset}
+### Detailed Structure {-}
 
-### Home {-}
+```{r 1-det-struc}
 
+fs::dir_tree(file.path(h_theme_dir), recurse=T)
+
+```
 
 <br/>
 
-### config.yaml {-}
+## config.yaml {-}
 
-```{r config-yaml, comment='', echo = F, cache=T, cache.vars=''}
+```{r 1-config-yaml, comment='', echo = F, cache=T, cache.vars=''}
 
 file_content <- readLines(file.path(h_theme_dir,"config.yaml"))
 cat(file_content, sep = "\n")
@@ -190,9 +203,9 @@ cat(file_content, sep = "\n")
 
 <br/>
 
-### netlify.toml {-}
+## netlify.toml {-}
 
-```{r netlify-toml, comment='', echo = F, cache=T, cache.vars=''}
+```{r 1-netlify-toml, comment='', echo = F, cache=T, cache.vars=''}
 
 file_content <- readLines(file.path(h_theme_dir, "netlify.toml"))
 cat(file_content, sep = "\n")
@@ -201,10 +214,10 @@ cat(file_content, sep = "\n")
 
 <br/>
 
-### index.Rmd {-}
+## index.Rmd {-}
 
 
-```{r index-rmd, comment='', echo = F, cache=T, cache.vars=''}
+```{r 1-index-rmd, comment='', echo = F, cache=T, cache.vars=''}
 
 file_content <- readLines(file.path(h_theme_dir, "index.Rmd"))
 cat(file_content, sep = "\n")
@@ -213,11 +226,11 @@ cat(file_content, sep = "\n")
 
 <br/>
 
-### R {.tabset -}
+## R {.tabset -}
 
-#### build.R {-}
+### build.R {-}
 
-```{r r-build-r, comment='', echo = F}
+```{r 1-r-build-r, comment='', echo = F}
 
 file_content <- readLines(file.path(h_theme_dir, "R/build.R"))
 cat(file_content, sep = "\n")
@@ -226,9 +239,9 @@ cat(file_content, sep = "\n")
 
 <br/>
 
-#### build2.R {-}
+### build2.R {-}
 
-```{r r-build2-r, comment='', echo = F}
+```{r 1-r-build2-r, comment='', echo = F}
 file_content <- readLines(file.path(h_theme_dir, "R/build.R"))
 cat(file_content, sep = "\n")
 
@@ -236,17 +249,24 @@ cat(file_content, sep = "\n")
 
 <br/>
 
-### content {-}
+## content {-}
 
                   
 
-```{r content, comment='', echo = F}
+```{r 1-content, comment='', echo = F}
 
 fs::dir_tree(file.path(h_theme_dir, "content"))
 
 ```
 
 <br/>
+
+## Processing {- .tabset}
+
+### Home {-}
+
+<br/>
+
 
 ### Build {-}
 
@@ -255,7 +275,7 @@ fs::dir_tree(file.path(h_theme_dir, "content"))
 
 * Recommend running blogdown::check_content()
 
-```{r build, echo=T}
+```{r 1-build, echo=T}
 
 setwd(h_theme_dir)
 blogdown::build_site()
@@ -264,7 +284,7 @@ fs::dir_tree(recurse=F)
 
 ```
 
-* From local buid `output`, the `public` folder  can be ubpoaded to
+* From local buid `output`, the `public` folder  can be ubloaded to
 blogdown::serve_site()the Netlify drag-and-drop method
 
 <br/>
@@ -276,15 +296,7 @@ blogdown::serve_site()the Netlify drag-and-drop method
 
 To serve locally.
 
-```{ serve-site, echo = T} 
-
-options(servr.daemon = TRUE)
-
-blogdown::serve_site(.site_dir = h_theme_dir)
-	     
-```
-
-```{r serve-site, echo = T}
+```{r 1-serve-site, echo = T}
 
 options(servr.daemon = TRUE)
 
@@ -315,20 +327,232 @@ blogdown::serve_site(.site_dir = h_theme_dir)
 <br/>
 <br/>
 
-### Automated deployment  through Netlify {-}
+### Automated deploy {-}
 
 * have to host all source files of your website in a GIT repository
 * follow Netlify  guide to create a new site from your GIT repository.
    - For a new site, you have to specify a command to build your website,
    - as well as the path of the publish directory.
 
+* [yihui/hugo-lithium](https://yihui-hugo-lithium.netlify.app/)
 
+
+<!--
 * See [Netlify Doc: Configure Builds](https://docs.netlify.com/build/configure-builds/overview/)
- 
+--> 
 
 
 <br/>
 <br/>
+
+# Theme = `r h_theme  = "yihui/hugo-xmin"; h_theme` {.tabset}
+
+URL: https://yihui-hugo-xmin.netlify.app/
+
+## Home {-}
+
+<br/>
+
+## Structure {-}
+
+```{r 2-initiate-site, echo=T, cache=T, cache.vars='h_theme_dir'}
+h_theme_dir <- paste0("../", sub("/", '_', h_theme))
+
+if(dir.exists(h_theme_dir)) fs::dir_delete(h_theme_dir)
+dir.create(h_theme_dir)
+
+blogdown::new_site(
+       dir = h_theme_dir,
+       theme = h_theme,
+       force = NA,
+       install_hugo = TRUE,
+       format = "yaml",
+       sample = TRUE,
+       hostname = "github.com",
+       theme_example = TRUE,
+       empty_dirs = FALSE,
+       to_yaml = TRUE,
+       netlify = TRUE,
+       .Rprofile = TRUE,
+       serve = if (interactive()) "ask" else FALSE
+     )
+     
+
+  
+if(F)
+t(t(list.files(h_theme_dir))) %>%
+knitr::kable(
+caption = "Content of site folders"
+) 
+
+fs::dir_tree(file.path(h_theme_dir), recurse=F)
+
+```
+
+
+### Detailed Structure {-}
+
+```{r 2-det-struc}
+
+fs::dir_tree(file.path(h_theme_dir), recurse=T)
+
+```
+
+<br/>
+
+
+<br/>
+
+## hugo.yaml {-}
+
+```{r 2-hugo-yaml, comment='', echo = F, cache=T, cache.vars=''}
+
+file_content <- readLines(file.path(h_theme_dir,"hugo.yaml"))
+cat(file_content, sep = "\n")
+
+```
+
+
+<br/>
+
+## netlify.toml {-}
+
+```{r 2-netlify-toml, comment='', echo = F, cache=T, cache.vars=''}
+
+file_content <- readLines(file.path(h_theme_dir, "netlify.toml"))
+cat(file_content, sep = "\n")
+
+```
+
+<br/>
+
+
+## content {-}
+
+```{r 2-content, comment='', echo = F}
+
+fs::dir_tree(file.path(h_theme_dir, "content"))
+
+```
+
+<br/>
+
+## Missing themes {}
+
+- nanstats/tanka
+- zwbetz-gh/cupper,
+- alxschwar/simple-a
+- jbub/ghostwriter
+
+
+
+<br/>
+
+# Theme = `r h_theme  = "xianmin/hugo-theme-jane"; h_theme` {.tabset}
+
+URL: https://xianmin-hugo-theme-jane.netlify.app/
+
+## Home {-}
+
+<br/>
+
+## Structure {-}
+
+```{r 3-initiate-site, echo=T, cache=T, cache.vars='h_theme_dir'}
+
+h_theme_dir <- paste0("../", sub("/", '_', h_theme))
+
+if(dir.exists(h_theme_dir)) fs::dir_delete(h_theme_dir)
+dir.create(h_theme_dir)
+
+blogdown::new_site(
+       dir = h_theme_dir,
+       theme = h_theme,
+       force = NA,
+       install_hugo = TRUE,
+       format = "yaml",
+       sample = TRUE,
+       hostname = "github.com",
+       theme_example = TRUE,
+       empty_dirs = FALSE,
+       to_yaml = TRUE,
+       netlify = TRUE,
+       .Rprofile = TRUE,
+       serve = if (interactive()) "ask" else FALSE
+     )
+     
+
+  
+if(F)
+t(t(list.files(h_theme_dir))) %>%
+knitr::kable(
+caption = "Content of site folders"
+) 
+
+fs::dir_tree(file.path(h_theme_dir), recurse=F)
+
+```
+
+
+### Skip Detailed Structure {-}
+
+```{r 3-det-struc,eval=F}
+
+fs::dir_tree(file.path(h_theme_dir), recurse=T)
+
+```
+
+<br/>
+
+
+<br/>
+
+## hugo.yaml {-}
+
+```{r 3-hugo-yaml, comment='', echo = F, cache=T, cache.vars=''}
+
+file_content <- readLines(file.path(h_theme_dir,"hugo.yaml"))
+cat(file_content, sep = "\n")
+
+```
+
+
+<br/>
+
+## netlify.toml {-}
+
+```{r 3-netlify-toml, comment='', echo = F, cache=T, cache.vars=''}
+
+file_content <- readLines(file.path(h_theme_dir, "netlify.toml"))
+cat(file_content, sep = "\n")
+
+```
+
+<br/>
+
+## full-cinfig.toml {-}
+
+```{r 3-full-config-toml, comment='', echo = F, cache=T, cache.vars=''}
+
+file_content <- readLines(file.path(h_theme_dir, "full-config.toml"))
+cat(file_content, sep = "\n")
+
+```
+
+<br/>
+
+
+
+## content {-}
+
+```{r 3-content, comment='', echo = F}
+
+fs::dir_tree(file.path(h_theme_dir, "content"))
+
+```
+
+<br/>
+
 
 ```{r, echo=FALSE}
   knitr::knit_exit()
